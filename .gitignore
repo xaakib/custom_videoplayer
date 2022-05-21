@@ -30,6 +30,7 @@
 .pub-cache/
 .pub/
 /build/
+package/chewie_player/LICENSE
 
 # Web related
 lib/generated_plugin_registrant.dart
