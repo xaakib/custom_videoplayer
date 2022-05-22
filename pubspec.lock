@@ -215,9 +215,9 @@ packages:
   pod_player:
     dependency: "direct main"
     description:
-      name: pod_player
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: package
+      relative: true
+    source: path
     version: "0.0.5"
   sky_engine:
     dependency: transitive

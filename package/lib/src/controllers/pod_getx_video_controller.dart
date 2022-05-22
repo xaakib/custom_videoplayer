@@ -51,6 +51,19 @@ class PodGetXVideoController extends _PodUiController {
     isLooping = playerConfig.isLooping;
   }
 
+  double videoAspectRatioSize = 21 / 9;
+  RxBool isFitBox = false.obs;
+
+  /// player fit sizeing
+  void playerVideoAspectRatioSize({
+    required double size,
+  }) {
+    videoAspectRatioSize = size;
+    isFitBox.value = !isFitBox.value;
+    print("isfitBox$videoAspectRatioSize :::: ${isFitBox.value}");
+    update();
+  }
+
   ///*init
   Future<void> videoInit() async {
     ///

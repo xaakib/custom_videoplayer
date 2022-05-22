@@ -236,6 +236,23 @@ class _MobileOverlayBottomControlles extends StatelessWidget {
                       : Icons.fullscreen,
                 ),
               ),
+              const Spacer(),
+              IconButton(
+                  color: itemColor,
+                  onPressed: () {
+                    if (_podCtr.isFitBox.value == false) {
+                      _podCtr.playerVideoAspectRatioSize(
+                        size: 16 / 9,
+                      );
+                    } else {
+                      _podCtr.playerVideoAspectRatioSize(
+                        size: 21 / 10,
+                      );
+                    }
+                  },
+                  icon: Icon(_podCtr.isFitBox.value
+                      ? Icons.fit_screen
+                      : Icons.screenshot_outlined)),
             ],
           ),
           GetBuilder<PodGetXVideoController>(

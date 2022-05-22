@@ -14,6 +14,7 @@ class _PodCoreVideoPlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _podCtr = Get.find<PodGetXVideoController>(tag: tag);
+
     return Builder(
       builder: (_ctrx) {
         return RawKeyboardListener(
@@ -31,7 +32,7 @@ class _PodCoreVideoPlayer extends StatelessWidget {
             children: [
               Center(
                 child: AspectRatio(
-                  aspectRatio: videoAspectRatio,
+                  aspectRatio: _podCtr.videoAspectRatioSize,
                   child: VideoPlayer(videoPlayerCtr),
                 ),
               ),
