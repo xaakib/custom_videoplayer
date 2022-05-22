@@ -13,6 +13,7 @@ class _MobileOverlay extends StatelessWidget {
     const overlayColor = Colors.black38;
     const itemColor = Colors.white;
     final _podCtr = Get.find<PodGetXVideoController>(tag: tag);
+    // ignore: cascade_invocations
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -67,6 +68,18 @@ class _MobileOverlay extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              const SizedBox(width: 20),
+              IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    _podCtr.isFullScreen
+                        ? _podCtr.disableFullScreen(context, tag)
+                        : print("NoFullscreen");
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back_ios_new_outlined,
+                    color: Colors.white,
+                  )),
               Expanded(
                 child: IgnorePointer(
                   child: _podCtr.videoTitle ?? const SizedBox(),
