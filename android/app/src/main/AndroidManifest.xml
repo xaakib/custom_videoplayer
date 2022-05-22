@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.custom_videoplayer">
+    package="com.example.player">
    <application
-        android:label="custom_videoplayer"
+        android:label="player"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

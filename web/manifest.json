@@ -1,6 +1,6 @@
 {
-    "name": "custom_videoplayer",
-    "short_name": "custom_videoplayer",
+    "name": "player",
+    "short_name": "player",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
